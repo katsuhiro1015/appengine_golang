@@ -7,15 +7,14 @@ package main
 import (
 	"fmt"
 	"net/http"
-
-	"google.golang.org/appengine"
 )
 
 func main() {
 	http.HandleFunc("/usagisan/", handleUsagisan)
 	http.HandleFunc("/nukosama/", handleNukosama)
 	http.HandleFunc("/kumasan/", handleKumasan)
-	appengine.Main()
+	// 8080ポートで起動
+	http.ListenAndServe(":8080", nil)
 }
 
 func handleUsagisan(w http.ResponseWriter, r *http.Request) {
