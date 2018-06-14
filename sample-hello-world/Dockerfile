@@ -1,5 +1,7 @@
-FROM scratch
+FROM golang
+
+ADD . /go/src/
+
 EXPOSE 8080
 
-ADD ./app /app
-CMD ["/app"]
+CMD ["/usr/local/go/bin/go", "run", "/go/src/hello.go"]
