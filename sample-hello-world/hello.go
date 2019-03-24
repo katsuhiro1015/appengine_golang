@@ -10,9 +10,9 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/usagi/", handleUsagisan)
-	http.HandleFunc("/nuko/", handleNukosama)
-	http.HandleFunc("/kuma/", handleKumasan)
+	http.HandleFunc("/usagisan/", handleUsagisan)
+	http.HandleFunc("/nukosama/", handleNukosama)
+	http.HandleFunc("/kumasan/", handleKumasan)
 	// 8080ポートで起動
 	http.ListenAndServe(":8080", nil)
 }
